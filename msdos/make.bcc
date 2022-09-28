@@ -1,0 +1,33 @@
+# Makefile for CJet - LaserJet Emulation for CaPSL printers
+# Copyright (C) 1994-1996 Michael Huijsmans 
+# mgh@sbox.tu-graz.ac.at
+#
+# Borland C++ 3.1, small model
+
+
+EXECNAME = cjets.exe
+
+
+CC  = bcc
+OPT = -A -a -ms -N -k -DMSDOS -DBCC
+
+# define this for your site
+#LIB=D:\BC\LIB
+
+CFLAGS  = $(OPT)
+
+OBJ1 = main.obj parse.obj function.obj raster.obj fonts.obj misc.obj
+OBJ2 = symbol.obj pjl.obj page.obj macro.obj io.obj
+
+cjet: $(OBJ1) $(OBJ2)
+	$(CC) -a -L$(LIB) -e$(EXECNAME) @cjets.rsp
+
+$(OBJ1): pcl.h cjet.h capsl.h symbol.h
+$(OBJ2): pcl.h cjet.h capsl.h symbol.h
+
+
+clean:
+	del *.obj
+	del $(EXECNAME)
+
+

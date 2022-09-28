@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -e
+
+/usr/share/cups/test-drivers -n adt-test-cjet-0 -r '^foomatic-db-compressed-ppds.*\-cjet'

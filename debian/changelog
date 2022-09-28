@@ -1,0 +1,107 @@
+cjet (0.8.9-10) UNRELEASED; urgency=medium
+
+  * update
+
+ -- Debian Printing Team <debian-printing@lists.debian.org>  Thu, 12 May 2022 11:11:35 +0800
+
+cjet (0.8.9-10) unstable; urgency=medium
+
+  [ Didier Raboud ]
+  * Add Salsa CI configuration
+
+  [ Thorsten Alteholz ]
+  * replace watch file by fake one for nonexisting upstream site
+  * add myself to uploaders
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sat, 15 Jan 2022 23:04:01 +0000
+
+cjet (0.8.9-9) unstable; urgency=medium
+
+  * Remove myself from Uploaders
+  * Run wrap-and-sort -baskt
+  * S-V: Update to 4.6.0 without changes needed
+  * Update watch file format version to 4.
+
+ -- Didier Raboud <odyx@debian.org>  Wed, 01 Sep 2021 17:59:17 +0200
+
+cjet (0.8.9-8) unstable; urgency=medium
+
+  * Refresh packaging:
+    - Use secure copyright file specification URI
+    - Bump debhelper from deprecated 9 to 13
+    - Set debhelper-compat version in Build-Depends
+    - Remove unnecessary 'Testsuite: autopkgtest' header
+    - Bump S-V to 4.5.0 without changes needed
+    - Drop Chris Lawrence <lawrencc> from Uploaders, with thanks for his past
+      work
+    - Drop ancient Breaks/Replaces against cjet
+
+ -- Didier Raboud <odyx@debian.org>  Sun, 28 Jun 2020 18:37:21 +0200
+
+cjet (0.8.9-7) unstable; urgency=medium
+
+  * Update debian/control syntax with cme
+  * Bump Standards-Version to 4.1.3 without changes needed
+  * Update Vcs-* fields for the move to salsa.d.o
+  * Initialize git-dpm
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 09 Feb 2018 17:30:57 +0100
+
+cjet (0.8.9-6) unstable; urgency=medium
+
+  * Add autopkgtest suite
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 01 Aug 2014 15:36:24 +0200
+
+cjet (0.8.9-5) unstable; urgency=medium
+
+  [ Bart Martens ]
+  * Add debian/watch
+
+  [ Didier Raboud ]
+  * Move the repository from collab-maint to printing; update the VCS-*
+    fields accordingly
+
+ -- Didier Raboud <odyx@debian.org>  Wed, 05 Mar 2014 16:26:23 +0100
+
+cjet (0.8.9-4) unstable; urgency=low
+
+  * Drop cjet transitional package which reached stable
+  * Bump Standards-Version to 3.9.5 without changes needed
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 29 Nov 2013 12:08:39 +0100
+
+cjet (0.8.9-3) unstable; urgency=low
+
+  [ Didier Raboud ]
+  * Put under Debian Printing Team umbrella and add myself as Uploader.
+  * Rename cjet to printer-driver-cjet, add transitional package.
+    (Closes: #647531)
+  * Promote printer-driver-cjet to optional priority.
+  * Rewrite short description.
+  * Add missing comma between Depends.
+  * Change source format to 3.0 (quilt).
+  * Convert debian/rules to tiny dh style, bump compat to 9 for auto-
+    buildflags.
+  * Patch the upstream Makefile to use exported flags. (Closes: #436629)
+  * Rewrite debian/copyright using the copyright-format 1.0.
+  * Bump Standards-Version to 3.9.3 without changes needed.
+  * Add Vcs-* fields as this will be maintained on Alioth's collab-
+    maint.
+
+  [ Osamu Aoki ]
+  * Rewrite long description to be more inclusive. (Closes: #272016)
+
+ -- Didier Raboud <odyx@debian.org>  Wed, 21 Mar 2012 12:55:27 +0100
+
+cjet (0.8.9-2) unstable; urgency=low
+
+  * Rebuild package to update ElGamal signature.  (Closes: #494854)
+
+ -- Chris Lawrence <lawrencc@debian.org>  Wed, 13 Aug 2008 14:00:36 -0500
+
+cjet (0.8.9-1) unstable; urgency=low
+
+  * Initial Release.  (Closes: #199631)
+
+ -- Chris Lawrence <lawrencc@debian.org>  Wed,  2 Jul 2003 10:11:13 -0500

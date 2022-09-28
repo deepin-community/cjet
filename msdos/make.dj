@@ -1,0 +1,24 @@
+# Makefile for CJet - LaserJet Emulation for CaPSL printers
+# Copyright (C) 1994-1996 Michael Huijsmans mgh@sbox.tu-graz.ac.at
+#
+# Makefile for DJGPP
+# make -f make.dj
+#
+
+EXECNAME = cjetx
+CC	 = gcc
+OPT	 = -O2 -Wall
+
+CFLAGS	 = $(OPT)
+
+OBJ = main.o parse.o function.o raster.o fonts.o misc.o symbol.o pjl.o page.o macro.o io.o
+
+cjet: $(OBJ)
+	$(CC) -s -o $(EXECNAME) $(OBJ)
+	coff2exe $(EXECNAME)
+
+clean:
+	del *.o $(EXECNAME)
+	
+
+$(OBJ): pcl.h cjet.h capsl.h

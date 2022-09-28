@@ -1,0 +1,36 @@
+From 5b184644876b05dfcc907a82e746cc78fd60c824 Mon Sep 17 00:00:00 2001
+From: Didier Raboud <odyx@debian.org>
+Date: Fri, 9 Feb 2018 17:30:53 +0100
+Subject: Don't hardcode compiler/linker options.
+
+ This allows the Debian build options set by dpkg-buildflags to be used.
+Last-Update: 2012-03-13
+---
+ Makefile | 8 --------
+ 1 file changed, 8 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 5220873..419a634 100644
+--- a/Makefile
++++ b/Makefile
+@@ -4,20 +4,12 @@
+ # Makefile for UNIX systems
+ # 
+ 
+-# compiler, compiler and linker options 
+-CC	  = gcc
+-OPT	  = -O2 -Wall
+-LINKOPT   = -s
+-
+ # you should not need to change anything below
+ 
+ SHELL     = /bin/sh
+ 
+ EXECNAME  = cjet
+ 
+-CFLAGS	  = $(OPT)
+-LDFLAGS   = $(LINKOPT)
+-
+ OBJ = main.o parse.o function.o raster.o fonts.o misc.o symbol.o\
+       page.o pjl.o macro.o io.o
+ 

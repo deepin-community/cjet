@@ -1,0 +1,30 @@
+CJET - HP Laserjet Emulation for Canon CaPSL (level III+) laser printers
+Copyright (c) 1996 Michael Huijsmans              mgh@sbox.tu-graz.ac.at
+--------------------------------------------------------------------------
+
+Compilation & "installation":
+
+0. Makefiles:
+
+- `Makefile' is for any UNIX system. Executable is  `cjet'.
+
+- `make.dj' is for MSDOS and djgpp. Resulting program name is `cjetx.exe'.
+
+- `make.bcc' and `cjets.rsp' are for use with Borland C++ 3.1. Resulting
+   program name is `cjets.exe'.
+
+
+1. Edit the appropriate Makefile for your system (CC etc.)
+   Defaults are for gcc.
+
+2. Edit "config.h" to #define your printer paper cassette size and default
+   symbol set. Defaults are European A4 paper and Roman-8.
+   
+3. type  `make -f <appropriate Makefile>' for DOS or just `make' for UNIX
+   
+4. Copy the executable to somewhere in your PATH.
+
+
+
+
+

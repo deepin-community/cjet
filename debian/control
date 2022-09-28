@@ -1,0 +1,28 @@
+Source: cjet
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Uploaders: Thorsten Alteholz <debian@alteholz.de>
+Section: text
+Priority: optional
+Build-Depends:
+ debhelper-compat (= 13),
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/printing-team/cjet
+Vcs-Git: https://salsa.debian.org/printing-team/cjet.git
+
+Package: printer-driver-cjet
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Suggests:
+ foomatic-db-engine | apsfilter,
+Description: printer driver for Canon LBP laser printers
+ CJET filters printer data from stdin to stdout, converting HP PCL
+ (Printer Command Language) escape sequences and data structures,
+ e.g. font headers, to their CaPSL equivalents.
+ .
+ CaPSL stands for Canon Printing System Language.  It is a set of
+ control command developed for the Canon European Language Printer.
+ CaPSL was used in Canon Export Models such as LBP-8markIII series and
+ LBP-4series.  Canon's older Japanese models (LBP-A404 GII etc. LIPS-III
+ as default command) usually have CaPSL emulation mode.

@@ -1,0 +1,63 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH CJET 1 "July 2, 2003"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+cjet \- converts HP PCL to Canon CaPSL format
+.SH SYNOPSIS
+.B cjet
+.RI [ options ] < input.pcl > output
+.SH DESCRIPTION
+This manual page documents briefly the
+.B cjet
+command.
+This manual page was written for the Debian distribution
+because the original program does not have a manual page.
+.PP
+\fBcjet\fP converts the common HP PCL page description language to
+Canon's CaPSL, which was used in the mid-1990s by some Canon laser
+printers.  It is normally used as part of a printer filter script,
+like the \fBFoomatic\fP system.
+.SH OPTIONS
+.TP
+.B \-h
+Show summary of options.
+.TP
+.B \-f
+Use full paint mode instead of partial paint mode.  This requires the
+printer to have at least 1.5 MB of memory to work correctly.
+.TP
+.B \-p
+Ignore paper size commands.  Useful for printing files formatted for
+paper size X on printers with paper size Y.
+.TP
+.B \-q
+Quiet mode. Suppresses all warning messages.
+.TP
+.B \-x X
+Shift output on paper by X dots horizontally. Positive values
+of X shift to the right; negative values to the left.  Dots are 1/300
+inch (0.085 mm).
+.TP
+.B \-y Y
+Shift output on paper by Y dots vertically. Positive values of Y shift
+downwards; negative values shift upwards.
+.SH SEE ALSO
+.BR /usr/share/doc/printer-driver-cjet/README
+.SH AUTHOR
+This manual page was written by Chris Lawrence <lawrencc@debian.org>
+based on the original README file by Michael Huijsmans for the Debian
+project (but may be used by others).

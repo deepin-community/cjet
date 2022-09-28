@@ -1,0 +1,7 @@
+Tests: printer-driver-cjet
+Restrictions: needs-root
+Depends:
+ cups,
+ cups-client (>= 1.7.3-5~),
+ foomatic-db-compressed-ppds,
+ printer-driver-cjet,

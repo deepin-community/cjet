@@ -1,0 +1,32 @@
+
+ CJet:  LaserJet emulation for Canon CaPSL III+ laser printers
+        Copyright (C) 1995 Michael Huijsmans
+        Email: mgh@sbox.tu-graz.ac.at
+--------------------------------------------------------------
+
+The files in this directory are simple PCL samples to print a table of
+characters 128 - 255 for various PCL symbol sets. The tables may show
+some differences to real PCL symbol sets, as some characters do not
+exist in any CaPSL graphic set. 
+
+Legals.pcl and legalp.pcl produce identical output. The difference is
+in the selection method: legalp.pcl selects HPLegal as a primary
+symbol set and prints characters 0..127 wheras legals.pcl selects it
+as a secondary set and prints characters 128..255.
+
+The files are hand-edited copies of an AmiPro document printed with a
+LaserJet driver (I forget which one, most likely LJIIp) from Windows
+3.1.
+
+
+desktops.pcl  - Desktop symbol set
+roman8s.pcl   - Roman-8 symbol set	  
+latin1s.pcl   - ISO Latin-1 symbol set (with WIN3.1 extensions)
+mctexts.pcl   - MC Text symbol set
+vuss.pcl      - Ventura US symbol set
+vintls.pcl    - Ventura International symbol set
+vmaths.pcl    - Ventura Math symbol set
+legalp.pcl    - HP Legal symbol set   
+legals.pcl    - HP Legal symbol set
+
+
